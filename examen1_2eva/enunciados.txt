@@ -1,0 +1,52 @@
+Ejercicio 1. Diseña un programa Java que compruebe si una serie de NIFs son correctos o no. Para ello debes diseñar la clase CompruebaNif con los siguientes métodos estáticos.
+esCorrecto. Recibe un NIF (String) y retorna true o false según ese NIF sea correcto o no. No es correcto si la letra no es la que corresponde al número.
+esIncorrecto. Recibe un NIF (String) y retorna true si es incorrecto o false en caso contrario.
+getCorrectos. Retorna un array con los NIFs correctos contenidos en otro array que se pasará como parámetro. 
+Puedes programar este último método de forma que el array de retorno no contenga posiciones vacías. 
+Existen varias formas de llevar a cabo esta tarea:
+utilizando el método split de la clase String.
+utilizando el método  Arrays.copyOfRange. 
+Aquí tienes un array de prueba. Ten en cuenta que los incorrectos son “80137039T” y “30198235S”.
+String [] nifs = {"80137039T","30198235S" , "15835050X", "30533829H", "46548712R", "30499569M", "30437328W", "30519074Y", "46533875E", "5195471R", "04587668L", "51374874G", "30535897Q"};
+
+Debes probar todos los valores del array con todos los métodos.
+Evita  repetir código en el desarrollo de los métodos.
+
+Ejercicio 2. Descarga este proyecto y completa la clase GestionAeropuertos con los siguientes métodos:
+buscarAeropuertoPorId. Recibe una “id” de aeropuerto, lo busca y retorna. En caso de no encontrarlo retorna nulo.
+elevacionMedia. Retorna la elevación media de los aeropuertos de un país. La función recibe como argumento el país.
+cambiarElevacionAeropuerto.  Recibe una “id” de aeropuerto y un valor de elevación que reemplazará al actual. Retorna true o false según se pudo hacer el cambio o no.
+getElevacionAeropuerto(). Recibe una “id” de aeropuerto y retorna su elevación en pies. Ten en cuenta que la elevación está en metros. Si no existe la “id” retornar -1.
+mostrarAeroPaises. Recibe varios países como argumento y muestra los aeropuertos de esos países. Países válidos: US y DE.
+aeropuertosPais. Retorna un array con los aeropuertos de un país que será pasado como argumento. Procura que el array devuelto no contenga valores nulos. Países válidos: US y DE.
+contarPorContinente. Cuenta y muestra el número de aeropuertos por continente. Mostrar continente y número de aeropuertos.
+
+Debes probar todos los métodos que has desarrollado. 
+Evita la repetición de código.
+
+Ejercicio 3. Diseña una aplicación Java que permita trabajar con los contactos de una posible agenda.  Crea por tanto la clase Contacto tal y como se detalla a continuación.
+Clase Contacto.
+Atributos: id, nombre, teléfono y correo electrónico. El id será entero y el resto cadenas.
+Métodos:
+Constructor con todos los campos.
+Getters/setters y toString.
+Equals y hashCode. Dos contactos se consideran iguales si tienen los mismos valores en los atributos nombre, teléfono y correo electrónico.
+
+Para probar el ejercicio:
+Crea un array de contactos, guarda varios objetos en él y muestra en pantalla todos los contactos cuyo correo sea de gmail (@gmail.com).
+Compara contactos de tal forma que se den las dos situaciones, es decir, que se obtenga como retorno true y false, según sean iguales o no.
+
+Notas:
+Comprime todos los proyectos en un solo archivo con el nombre Apellidos_Nombre_Examen1_2Eva y adjúntalo a la tarea.
+Utiliza la nomenclatura CamelCase para dar nombre a los identificadores.
+Diseña programas limpios y ordenados, tabulando el código correctamente.
+Utiliza nombres de variables claros e identificativos del dato que almacenan.
+Puntuación:
+El ejercicio 1 tiene un valor de 2,5  puntos. 
+Los dos primeros métodos valen 0,5 puntos. El tercero vale 1 punto y las pruebas 0,5 puntos.
+El ejercicio 2 tiene un valor de 5 puntos. 
+Los primeros cuatro apartados con sus pruebas valen 0,5 puntos cada uno.
+Los dos últimos valen 1,5  puntos cada uno, incluyendo sus pruebas.
+El ejercicio 3 tiene un valor de 2,5 puntos.
+Diseñar la clase vale 1 punto.
+Realizar las pruebas tiene un valor de 1,5 puntos.

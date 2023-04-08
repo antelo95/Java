@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author javie
- *
- */
-module funciones {
-}
