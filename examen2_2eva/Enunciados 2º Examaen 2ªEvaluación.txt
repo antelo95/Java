@@ -1,0 +1,48 @@
+DISEÑO DE INTERFACES Y COMPOSICIÓN DE CLASES.
+
+Ejercicio 1. Diseña una aplicación Java que trabaje con fechas como se indica. 
+
+La aplicación debe contener la clase Fechas, con la estructura que sigue:
+
+Atributo: array de fechas.
+Puedes usar este: 
+LocalDate [] fechas = {LocalDate.of(1990, 10, 1),  LocalDate.of(1969, 10, 1),	LocalDate.of(2000, 10, 1), LocalDate.of(2022, 10, 1), LocalDate.of(2002, 10, 1), LocalDate.of(2023, 10, 1)};
+Debe implementar la interfaz IUtilesFechas que a su vez contiene los métodos:
+getFechaMenor. Retorna la menor fecha del array (la más antigua).
+contarFechasPasadas. Retorna un entero que indica cuántas fechas del array son anteriores a la actual.
+getAniosEntre. Retorna el número de años transcurridos entre la fecha  más antigua del array y la más nueva. 
+Pistas para resolver algunos apartados:
+Puedes usar “sort” para ordenar el array.
+La API java.time contiene la clase Period y está el método between que retorna la diferencia entre dos fechas.
+
+Prueba la clase creada.
+
+Ejercicio 2. Diseña un programa Java que permita trabajar con publicaciones tal y como se detalla. 
+De cada publicación será necesario guardar un id, título, editorial y páginas (entero). Las publicaciones pueden ser libros de texto, de lectura y revistas.
+De las revistas se guarda el área a la que pertenece (motor, informática, móviles…)  y su periodicidad (mensual, semanal…). 
+De los libros de texto se guarda el nivel (ESO, Bachillerato, FP…) y el Curso (1º ESO, 2FP, …). 
+De los libros de lectura se guarda el año de publicación (entero)  y el género (novela, ensayo, biografía,...).
+
+Diseña el sistema de clases que reutilice el máximo código posible. Ten en cuenta que no se creará ningún objeto de la clase Publicación y que esta clase incluye un método llamado dameDatos que es abstracto. Cada clase (revisas, libros de texto y de lectura) incluirá el constructor, getters y setters, además del  método dameDatos que devolverá en un String todos los atributos del objeto concatenados. Este método sobrescribe el existente en Publicación.
+
+Los atributos de las clases diseñadas no serán accesibles desde el exterior.
+
+
+Crea un array y almacena en él objetos de diferentes tipos. Recorrelo y muestra sus objetos de la forma siguiente:
+[REVISTA] → título y periodicidad.
+[LIBRO DE TEXTO] → título, editorial y nivel.
+[LIBRO DE LECTURA] → título, año de publicación y género.
+El texto encerrado entre corchetes es un literal, debe aparecer tal cual se observa en el ejemplo.
+
+Notas:
+Comprime todos los proyectos en un solo archivo con el nombre Apellidos_Nombre_Examen2_2Eva y adjúntalo a la tarea.
+Utiliza la nomenclatura CamelCase para dar nombre a los identificadores.
+Diseña programas limpios y ordenados, tabulando el código correctamente.
+Utiliza nombres de variables claros e identificativos del dato que almacenan.
+Puntuación:
+El ejercicio 1 tiene un valor de 4  puntos. 
+Cada método correcto vale 1 punto.
+Resto del programa 1 punto.
+El ejercicio 2 tiene un valor de 6 puntos. 
+Crear el sistema de clases vale 3 puntos.
+Las pruebas valen otros 3 puntos.
