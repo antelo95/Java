@@ -1,0 +1,44 @@
+Ejercicio 1. Estudia este proyecto y completa la clase GestionPeliculas con los métodos que se indican a continuación.
+
+pelisSinProtaFemenina(). Retorna una colección con los títulos de las películas que no tienen protagonista femenina. En estos casos el valor del atributo es cadena vacía (“”).
+cuentaPorTipo. Retorna una colección con las parejas tipoPelícula-Cuenta. Es decir, retorna cuántas películas (número) existen de cada tipo (animación, thriller, drama, etc.)
+getNombresDirectoresSinRepetir. Retorna una colección con los nombres de los directores sin repetir, es decir, sólo debe aparecer una vez cada uno.
+duracionMediaPelisTipo. Recibe un tipo de película y retorna la duración media de las pelis de ese tipo. Se valorará la utilización de Optional.
+
+Prueba todos los métodos creados.
+
+Ejercicio 2. Diseña una aplicación Java que permita guardar recetas de cocina mediante  las clases que se citan a continuación.
+
+Clase Receta.
+Atributos:
+id y nombre. Ambos String.
+HashMap de tipo <String, Double>, que almacena cada ingrediente de la receta y su  cantidad.
+Métodos:
+Constructor (sólo para id y nombre).
+addIngrediente. Añade un ingrediente y su cantidad, a la receta.
+getters y setters.
+toString. Muestra todos los atributos de la receta.
+Ten en cuenta que dos recetas se consideran iguales si tienen el mismo id o nombre.
+
+Clase GestionRecetas.
+Atributos.
+Set de Recetas.
+
+
+
+Métodos.
+addReceta. Añade una receta a la colección.
+buscarRecetasIngrediente. Recibe como parámetro un ingrediente (String) y devuelve las recetas que lo incluyen. Devuelve una lista de recetas.
+eliminarReceta. Recibe un id de una receta y la elimina de la colección.
+buscarRecetaPorNombre. Recibe un texto como parámetro y busca todas las recetas que incluyan ese texto en el nombre. Devuelve una lista de recetas.
+buscarIngredienteEnReceta. Recibe un id de receta y un nombre de ingrediente. Devuelve true si la receta con esa id lleva el ingrediente y false si no lo lleva.
+
+Prueba la clase GestionRecetas y sus métodos.
+
+Ejercicio 3. Debes diseñar una aplicación Java que permita sortear una serie de premios entre una lista de participantes. Para realizar esta tarea,  completa el proyecto adjunto. En él, dispones de una lista de participantes y otra de premios,  guardadas en dos objetos de tipo arrayList.
+
+Ten en cuenta que:
+Para cada premio se elegirá un participante al azar.
+Un participante sólo podrá recibir un premio como máximo. 
+La lista de premios y participantes podría variar.
+La salida de la aplicación debe coincidir con la de la imagen.
