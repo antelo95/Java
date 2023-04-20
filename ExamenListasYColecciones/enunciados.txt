@@ -1,0 +1,29 @@
+Ejercicio 2. Diseña una aplicación Java que sirva para gestionar una colección de personas. De cada persona se guardará id, nombre, apellidos y fecha de nacimiento (java.time.LocalDate). 
+
+Esta gestión implica diseñar los métodos siguientes:
+añadir una persona a la colección.
+añadir varias personas. Las personas serán pasadas en un array.
+retornar las personas que nacieron en un año concreto. El año deberá ser pasado como parámetro. 
+retornar las personas que nacieron entre dos fechas pasadas como parámetros. Los datos retornados deben estar  ordenados de forma ascendente por fecha.
+eliminar las personas cuyos apellidos contengan un patrón pasado como parámetro. Retornar el número de personas que se han eliminado.
+
+Ten en cuenta que dos personas se consideran iguales si tienen el mismo valor de id.
+Prueba la clase GestionPersonas, llamando a cada uno de sus métodos.
+
+
+
+
+Ejercicio 3. Estudia las clases del proyecto que puedes descargar desde aquí, y completa la aplicación de la forma que se indica más adelante. 
+Ten en cuenta que este proyecto carga en una lista los partidos de baloncesto jugados en la Euroliga a lo largo de los años. 
+
+Indicaciones:
+Crea una interfaz con los métodos siguientes.
+ganadosCasa. Retorna una mapa (String, Integer) en el que se guardará nombre de equipo y número de victorias en casa a lo largo del tiempo. Deben aparecer todos los equipos.
+equiposParticipantes. Retorna una colección de tipo String con los nombres de los equipos participantes, sin repeticiones (una sola vez cada uno) y ordenados por nombre de equipo.
+partidosEquipo. Retorna una colección con los partidos en los que ha participado un equipo como local y como visitante (todos). El equipo será pasado como parámetro.
+ganadosDelEquipo. Retorna el número de partidos ganados por un equipo, tanto como local como visitante y a lo largo de todos los años.  El equipo será pasado como parámetro.
+aniosJugados. Retorna una colección con los años en los que se han jugado partidos (sin repeticiones). La colección debe estar ordenada de forma ascendente. 
+promedioPuntosPartidoAnio. Retorna un mapa con los años en los que se han jugado partidos y la media de puntos por partido por año. Para conocer los puntos por partido se sumarán puntos del equipo local más puntos del equipo visitante.
+
+La clase GestionPartidos debe implementar esa interfaz.
+Prueba los métodos creados.

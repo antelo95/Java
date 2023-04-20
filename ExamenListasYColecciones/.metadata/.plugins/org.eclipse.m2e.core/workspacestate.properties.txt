@@ -1,0 +1,4 @@
+#Mon Apr 17 17:26:31 CEST 2023
+com.clases\:Ejercicio02Maven\:jar\:tests\:0.0.1-SNAPSHOT=/home/apolo/Documents/sf_java/EclipseWorkSpace/U10/Ejercicio03_Completar/target/test-classes
+com.clases\:Ejercicio02Maven\:jar\:\:0.0.1-SNAPSHOT=/home/apolo/Documents/sf_java/EclipseWorkSpace/U10/Ejercicio03_Completar/target/classes
+com.clases\:Ejercicio02Maven\:pom\:\:0.0.1-SNAPSHOT=/home/apolo/Documents/sf_java/EclipseWorkSpace/U10/Ejercicio03_Completar/pom.xml
