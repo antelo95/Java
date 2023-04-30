@@ -1,0 +1,95 @@
+1.Diseña interfaces y expresiones lambda asociadas a esas interfaces que cumplan estos criterios:
+retorne true/false según una cadena contenga o no un carácter concreto.
+retorne la cadena de mayor longitud de dos pasadas como parámetro.
+retorne el mayor valor de un array pasado como parámetro.
+retorne la suma de los valores de un array pasado como parámetro.
+retorne el primer valor en orden ascendente de dos enteros pasados como parámetro (el menor).
+retorne el primer valor en orden descendente de dos enteros pasados como parámetro (el mayor).
+
+2.Partiendo de una lista como esta List<Integer> numeros = Arrays.asList(1,10,20,33,34,32,455,20,100); realiza las siguientes operaciones.
+Mostrar sólo los pares.
+Mostrar true/false si son todos positivos. Usar allMatch(filtro).
+Obtener el menor.
+Obtener la suma de todos los valores.
+
+3.Partiendo de una lista como esta List<Integer> numeros = Arrays.asList(1,17,20,33,19,32,455,23,100); realiza las siguientes operaciones.
+Mostrar los valores impares de la misma.
+Mostrar los valores que son, al mismo tiempo,  múltiplos de 2 y de 5.
+Mostrar cada valor de la lista indicando si es primo o no.
+Obtener una lista con los valores pares de la lista original.
+
+4.Crea una lista de valores Double a partir del método doubles de la clase Random. Debes crear 10 valores entre 1 y 200. 
+List<Double> numeros = new Random().doubles(10, 1, 200)
+                .boxed().collect(Collectors.toList());
+List<Double> numeros = new Random().doubles(10,1,200)
+   			 .boxed()
+   			 .toList();
+El método boxed() convierte un Stream de tipos primitivos (double) en un Stream de una clase envoltorio (Double).
+Luego 
+Muestra sólo la parte entera de cada Double (método intValue() de la clase Double).
+Muestra la parte decimal de cada Double.
+Elimina los menores que 100 y  cuenta los elementos restantes.
+
+5.Crea una lista de valores Double a partir del método doubles de la clase Random. Debes crear 10 valores entre 1 y 200. 
+Luego muestra los valores de la lista 
+Ordenados de forma ascendente.
+Ordenados de forma descendente
+
+6.Crea una lista de objetos Jugador. La clase Jugador tiene como atributos id, nombre, peso y altura (ambos de tipo double).
+Muestra las alturas en orden creciente.
+Muestra los datos de los jugadores en orden creciente por nombre
+Muestra los datos de los jugadores en orden decreciente por peso
+Muestra los datos del jugador más pesado
+
+7.Crea una lista de objetos jugadores. La clase Jugador tiene como atributos nombre, peso y altura (ambos de tipo double).
+Muestra los nombres de los jugadores en orden ASC
+Muestra los datos de los jugadores cuyo nombre contiene la “a”
+Muestra la media de los pesos
+Mostrar los jugadores con altura superior a la media
+
+8.Descarga este proyecto y completa la clase ColeccionMultas añadiendo los métodos siguientes.
+Retornar el número de multas asociadas a una matrícula.
+Retornar la suma de los importes de las multas asociadas a una matrícula.
+Retornar el importe medio de las multas de un mes y año pasados como parámetros.
+Retornar las multas asociadas a una matrícula.
+Retornar la primera multa en orden cronológico asociada a una matrícula.
+Retornar si todos los importes de las multas asociadas a una matrícula son superiores a un valor dado.
+
+9.Partimos de una matriz como la que sigue: Integer [][] m = {{1,2,3,4},{4,5,6,7}}; y queremos obtener.
+La lista de sus elementos sin repeticiones.
+La suma de sus elementos.
+
+10.En este caso disponemos de una lista de países de los que se guarda su nombre y los idiomas que en él se hablan (lista). Se pide:
+mostrar la lista de los idiomas que se hablan en todos los países ordenados alfabéticamente (sin repeticiones).
+contar los idiomas distintos que se hablan entre todos los países.
+
+11.Partimos de dos listas de enteros como las siguientes:
+List<Integer> pares = Arrays.asList(2,4,6,8);
+	List<Integer> impares = Arrays.asList(1,3,5,7);
+Se debe obtener la suma de los valores de ambas listas. 
+
+Pista: puede obtenerse un Stream de la forma Stream.of(lista1, lista2). En realidad se obtiene un Stream<Stream<Integer>> que podemos tratar con flatMap.
+
+12.Vamos a llevar a cabo la gestión de una lista de empleados (id, nombre y salario). Disponemos por tanto de la clase Empleado y de la clase Gestión.  Esta gestión consiste en:
+añadir empleados a la lista 
+buscar un empleado por su id 
+listar los salarios de los empleados con una id concreta. Pasar una lista de ids (Integer [ ] ids). Deben mostrarse nombre y salario. Consejo: tratar la lista de ids como un stream.
+
+13.Partimos de un archivo de texto que contiene una lista de películas, films.csv. La aplicación se encargará de cargar los datos del archivo en un List<Pelicula>. Ten en cuenta que la clase “Película” debe tener este formato y que el campo id no existe en el archivo de texto.
+
+Programa la clase GestionPelicula con estas acciones. Añade tú el tipo de retorno:
+
+mostrar(). Para comprobar que los datos se han cargado correctamente.
+buscarPeliPorId (int id).
+ordenarPelisPorId (String orden). El orden puede ser ASC o DESC.
+contarPelisDuranMasDe(int minutos)
+listaTiposPelis. Retorna una lista con todos los tipos de pelis sin repeticiones (String).
+peliMasDuracion. Retorna la peli de mayor duración.
+mediaDuracionPorTIpo (String tipo). Retorna la media de la duración de las pelis de ese tipo.
+pelisTituloContiene (String cadena) . Retorna una lista de pelis que contienen la cadena pasada en su título.
+actoresOrdenAscSinRepeticiones. Muestra los nombres de los actores ordenados de forma ASC y sin repeticiones
+
+14.Descarga este archivo y crea  objetos alumnos a partir del mismo. El archivo contiene por cada fila datos de un alumno: id, nombre y una serie de notas. Una vez cargados los datos en memoria debes programar las siguientes opciones:
+buscar alumno por id.
+obtener la nota media de un alumno.
+contar el número de aprobados y suspensos de un alumno.
