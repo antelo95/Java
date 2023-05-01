@@ -87,11 +87,5 @@ public class GestionPelicula {
 				.sorted()
 				.forEach(System.out::println);
 	}
-	public List<String> actoresOrdenados(){
-		return  pelis.stream()
-			.map(Pelicula::getActores)
-			.flatMap(lista-> lista.stream())
-			.sorted()
-			.toList();
-	}
+	
 }

@@ -19,11 +19,8 @@ public class App {
 //				System.out.println(string);
 //			}
 //			System.out.println(g.mediaDuracionPorTIpo("drama"));
-			//g.actoresOrdenAscSinRepeticiones();
-			List<String> actores = g.actoresOrdenados();
-			for (String string : actores) {
-				System.out.println(string);
-			}
+			g.actoresOrdenAscSinRepeticiones();
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
