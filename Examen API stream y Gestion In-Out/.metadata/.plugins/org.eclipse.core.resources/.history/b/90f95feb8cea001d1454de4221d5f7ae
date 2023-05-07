@@ -1,0 +1,47 @@
+package e1;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Stream;
+
+public class CopiarArchivos {
+	public static void copiar(Path origen, Path destino, String extension) throws IOException {
+		if (Files.isDirectory(origen) && Files.isDirectory(destino)) {
+			
+			System.out.printf("Copiando archivos \ndesde %s \nhacia %s\n\n", origen, destino);
+			Stream<Path> contenido;
+			AtomicInteger contador= new AtomicInteger();
+			
+			try {
+
+				contenido = Files.walk(origen, 1);
+				contenido
+				.filter(Files::isRegularFile)
+				.sorted()
+				.forEach(a -> {
+					try {
+						
+						Path destinoPath = Paths.get(destino.toAbsolutePath().toString(), a.getFileName().toString());
+						System.out.println(destinoPath.toString());
+						Files.copy(a,  destinoPath, StandardCopyOption.REPLACE_EXISTING);
+						contador.incrementAndGet();
+						
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						System.out.println(e.getMessage());
+					}
+				});
+				System.out.printf("\nCopiados %d archivos.", contador.get());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				System.out.println(e.getMessage());
+			}
+		} else {
+			System.out.println("Puede que haya habido un error.");
+		}
+	}
+}

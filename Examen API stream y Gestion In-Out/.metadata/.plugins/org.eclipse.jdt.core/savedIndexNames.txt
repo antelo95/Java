@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\javie\OneDrive\Escritorio\java\JavaGit\examenStreamGES\.metadata\.plugins\org.eclipse.jdt.core
+1253752996.index
+3551760670.index
+1035857970.index
+1865797976.index

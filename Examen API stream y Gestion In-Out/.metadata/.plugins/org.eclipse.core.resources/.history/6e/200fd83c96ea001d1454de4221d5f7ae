@@ -1,0 +1,30 @@
+package e3;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.Random;
+
+public class GestionGasto {
+	private List<Gasto> gastos = new ArrayList<>();
+
+	public GestionGasto() {
+		for (int i = 1; i < 11; i++) {
+			double impo = new Random().nextDouble(1, 100);
+			gastos.add(new Gasto("0"+i, LocalDate.of(i, i, 1+i), impo, "Descripcion"+i));
+		}
+		for (Gasto gasto : gastos) {
+			System.out.println(gasto.toString());
+		}
+	}
+	
+	public Optional<Double> gastoXid(String id) {
+		return gastos.stream()
+						.filter(g -> g.getId().equals(id))
+						.map(Gasto::getImporte)
+						.findFirst();
+	}
+	
+	
+}

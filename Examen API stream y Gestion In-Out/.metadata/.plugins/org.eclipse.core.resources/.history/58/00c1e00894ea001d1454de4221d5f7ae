@@ -1,0 +1,27 @@
+package e2;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+
+public class GestionUniversidades {
+	private List<Universidad> unis = new ArrayList<>();
+
+	public GestionUniversidades() throws IOException {
+		super();
+		String dir = System.getProperty("user.dir");
+		Path path =Paths.get(dir+"/files/universidades.csv");
+		List<String> lineas = Files.readAllLines(path);
+		for (String string : lineas) {
+			unis.add(new Universidad(string));
+		}
+		for (Universidad string : unis) {
+			System.out.println(string.toString());
+		}
+	}
+	
+	
+}

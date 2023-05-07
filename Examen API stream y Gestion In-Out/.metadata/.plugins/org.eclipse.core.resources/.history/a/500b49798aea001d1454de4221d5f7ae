@@ -1,0 +1,57 @@
+package e1;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class App {
+
+	public static void main(String[] args) {
+		//otra forma de obtener la carpeta de la app
+		String currentDir = System.getProperty("user.dir");
+		
+		Path origen = Paths.get(currentDir + "/origen");
+		Path destino = Paths.get(currentDir + "/destino");
+		
+		try {
+			copiar(origen, destino);
+		} catch (NoDirectoryException e) {
+			System.out.println(e.getMessage());
+		}
+			
+	}
+	
+	private static void copiar(Path origen, Path destino, String ) throws NoDirectoryException {
+		if (Files.isDirectory(origen) && Files.isDirectory(destino)) {
+			
+			System.out.printf("Copiando archivos \ndesde %s \nhacia %s\n\n", origen, destino);
+			Stream<Path> contenido;
+			AtomicInteger contador= new AtomicInteger();
+			
+			try {
+				contenido = Files.walk(origen, 1);
+				contenido
+				.filter(Files::isRegularFile)
+				.sorted()
+				.forEach(a -> {
+					try {
+						
+						Path destinoPath = Paths.get(destino.toAbsolutePath().toString(), a.getFileName().toString());
+						System.out.println(destinoPath.toString());
+						Files.copy(a,  destinoPath, StandardCopyOption.REPLACE_EXISTING);
+						contador.incrementAndGet();
+						
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						System.out.println(e.getMessage());
+					}
+				});
+				System.out.printf("\nCopiados %d archivos.", contador.get());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				System.out.println(e.getMessage());
+			}
+		} else {
+			throw new NoDirectoryException("Comprueba que origen y destino sean dos directorios");
+		}
+	}
+}
